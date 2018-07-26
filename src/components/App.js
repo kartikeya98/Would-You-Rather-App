@@ -11,7 +11,7 @@ import UserHome from './userhome';
 class App extends Component {
   componentDidMount() {
     this.props.Data()
-   // this.props.dispatch(handleInitialData())
+   
   }
 
   render() {
