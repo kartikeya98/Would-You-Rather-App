@@ -1,0 +1,62 @@
+.poll-avatar{
+    display: inline-block;
+    width: 50px;
+    
+    
+  }
+  
+  .poll-container{
+    margin:20px;
+    text-align: center;
+    
+  }
+  .row {
+      display: flex;
+  }
+  
+  .column {
+      flex: 40%;
+      padding: 5px;    
+      margin: 5px;    
+      transition: all 0.3s ease 0s;
+  }
+  
+  .one, .two{
+    background: rgba(250,250, 0, .2);
+    
+  }
+  
+  
+  
+  .one:hover, .two:hover{
+    background: rgba(255, 255, 0, 0.8);
+  }
+  
+  
+  
+  h3{
+    opacity: 1;
+  }
+  
+  .image-poll{
+    vertical-align: middle;
+    display: inline-block;
+    border-radius: 50%;  
+   
+    max-width: 50px;
+    
+  }
+  
+  p{
+    margin:0px;
+    font-size: 12px;
+  }
+  
+  
+  .select{
+    background: rgba(255, 255, 0, 0.8);
+  }
+  
+  h3{
+    margin-top:0px;
+  }

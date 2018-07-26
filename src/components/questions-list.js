@@ -41,11 +41,14 @@ class QuestionsList extends Component {
 
           <ul className='questions-list'>
             {questionsList.map( q => 
+            <div className="q_box">
+            <h3> Would you Rather</h3>
                 <li key={`q${q['id']}`}>
                   <Link to={`${match.url}/${q['id']}`}>
                     {q['optionOne'].text} / {q['optionTwo'].text}     
                   </Link>
-                </li> 
+                </li>
+                </div> 
               )
             }            
           </ul>             
