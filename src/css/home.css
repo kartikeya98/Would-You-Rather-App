@@ -1,0 +1,23 @@
+.home-title{
+    text-align: center
+  }
+  
+  .image-home {
+    display: block;
+    border-radius: 50%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    max-width: 90px;
+    
+  }
+  
+  h2{
+    margin-bottom: 10px;
+  }
+  
+  h5{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }

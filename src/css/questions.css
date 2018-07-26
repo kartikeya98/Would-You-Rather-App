@@ -1,0 +1,17 @@
+.questions-list{
+    text-align: center;
+    list-style-type: none;
+  
+  }
+  
+  .question-li{
+    display:block;
+  }
+  
+  .div-button{
+    background-color: #f1d82626;
+  }
+  
+  .div-button:hover{
+    background-color: #f1d826;
+  }
