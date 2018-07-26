@@ -8,7 +8,7 @@ import {
  import Poll from './poll'
  import QuestionsList from './questions-list'
  import NewPoll from  './newpoll'
-// import LeaderBoard from  './LeaderBoard'
+import LeaderBoard from  './leaderboard'
 import SignOut from './sign-out'
 import '../css/home.css';
 
@@ -31,8 +31,8 @@ class UserHome extends Component {
                    
                     
           <Switch>    
-            {/*                
-            <Route  path={`/${authedUser}/LeaderBoard`} component={LeaderBoard}/>  */}
+                      
+            <Route  path={`/${authedUser}/LeaderBoard`} component={LeaderBoard}/>
             <Route  path={`/${authedUser}/add`} component={NewPoll}/>   
             <Route  path={`/${authedUser}/questions/:questionId`} component={Poll}/> 
              <Route  path={`/${authedUser}/questions`} component={QuestionsList}/>
