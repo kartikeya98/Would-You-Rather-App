@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { 
-  Route,
-  Switch,
-  Redirect 
-} from "react-router-dom";
+import { Route,Switch} from "react-router-dom";
  import Poll from './poll'
  import QuestionsList from './questions-list'
  import NewPoll from  './newpoll'
 import LeaderBoard from  './leaderboard'
 import SignOut from './sign-out'
-import '../css/home.css';
+ import '../css/home.css';
 
 class UserHome extends Component {	
     
   	render() {
 
   		const { user, authedUser} = this.props
-       console.log('Home render...')
-
       return (
     		<div className="home-title">
     			<h2>Would You Rather</h2>
@@ -37,7 +31,7 @@ class UserHome extends Component {
             <Route  path={`/${authedUser}/questions/:questionId`} component={Poll}/> 
              <Route  path={`/${authedUser}/questions`} component={QuestionsList}/>
             <Route  path={`/${authedUser}/logout`}  component={SignOut}/>  
-            <Redirect to="/404" />             
+         
           </Switch>
         </div> 
     	)

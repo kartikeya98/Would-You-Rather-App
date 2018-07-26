@@ -2,7 +2,7 @@ import React ,{Component} from 'react'
 import {connect} from 'react-redux'
 import { setAuthedUser } from '../actions/autheduser'
 import { Route } from 'react-router-dom'
-import Home from './home';
+import UserHome from './userhome';
 import '../css/sign-in.css'
 
 
@@ -19,7 +19,7 @@ import '../css/sign-in.css'
     render() {
         const {authedUser} = this.props;
 
-        if(authedUser) {return <Route path={`/Home`} Component={Home} />}
+        if(authedUser) {return <Route path={`/Home`} Component={UserHome} />}
     
         return (
             <div>

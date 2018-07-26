@@ -60,13 +60,13 @@ function mapStateToProps ({authedUser, users, questions}) {
     authedUser,
     usersArray,
     usersAnswered: usersArray.reduce((acc, us) => {
-                                                  acc[us.id]= Object.keys(us.answers).length
-                                                  return acc 
-                                                },[]),  
+                  acc[us.id]= Object.keys(us.answers).length
+                 return acc 
+                        },[]),  
     usersAsked: usersArray.reduce((acc, us) => {
-                                                  acc[us.id]= us.questions.length
-                                                  return acc 
-                                                },[]),   
+              acc[us.id]= us.questions.length
+                return acc 
+                },[]),   
   };
 }
 

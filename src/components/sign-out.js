@@ -5,12 +5,11 @@ import {setAuthedUser} from '../actions/autheduser'
 
 
 class SignOut extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+    
+        state = {
             navigate: false
         }
-    }
+    
 
     componentDidMount(e) {
         return setTimeout(() => this.setState({ navigate: true }), 1500)      
@@ -24,7 +23,7 @@ class SignOut extends Component {
         }
 
         return (
-          <div>You successfully logouted</div>
+          <div>You successfully logout</div>
         );
     }
 }

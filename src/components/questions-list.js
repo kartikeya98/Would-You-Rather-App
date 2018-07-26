@@ -34,18 +34,18 @@ class QuestionsList extends Component {
             className='button-answered'
           >
             {answered
-              ? <h3>answered</h3>
-              : <h3>NOT answered</h3>
+              ? <h3>answered-list</h3>
+              : <h3>NOT answered-list</h3>
             }
           </button> 
 
           <ul className='questions-list'>
-            {questionsList.map( q => 
+            {questionsList.map( qeus => 
             <div className="q_box">
             <h3> Would you Rather</h3>
-                <li key={`q${q['id']}`}>
-                  <Link to={`${match.url}/${q['id']}`}>
-                    {q['optionOne'].text} / {q['optionTwo'].text}     
+                <li key={`qeus${qeus['id']}`}>
+                  <Link to={`${match.url}/${qeus['id']}`}>
+                    {qeus['optionOne'].text} / {qeus['optionTwo'].text}     
                   </Link>
                 </li>
                 </div> 

@@ -26,37 +26,31 @@ class Poll extends Component {
 
   render() {
 
-    const { 
-      question,  
-      isAnswered, 
-      answer, 
-      votesOptionOne, 
-      votesOptionTwo,
-      percentatgeOptionOne,
-      percentatgeOptionTwo,
-      avatarURLAuthor,
-
-    } = this.props
+ const { question,  isAnswered,  answer, votesOptionOne, votesOptionTwo,percentatgeOptionOne,percentatgeOptionTwo, avatarURLAuthor,} = this.props
 
     return (
       <div>
         {isAnswered ? (
+
+
             <div className="poll-container">
               <h5>These are the data for this poll</h5>
               <div className="row">
-                <div className={answer==="optionOne"? 'column select' :"column"}>
-                  <h4>{question.optionOne.text}</h4>
-                  <p>voted by</p>
-                  <h3>{votesOptionOne} persons</h3>
-                  <h1>{percentatgeOptionOne}%</h1>
-                </div>
-                <div className='poll-avatar'>
+              <div className='poll-avatar'>
                   <img 
                   src={avatarURLAuthor} 
                   alt="Avatar" 
                   className='image-poll'
                   />
                 </div>
+                
+                <div className={answer==="optionOne"? 'column select' :"column"}>
+                  <h4>{question.optionOne.text}</h4>
+                  <p>voted by</p>
+                  <h3>{votesOptionOne} persons</h3>
+                  <h1>{percentatgeOptionOne}%</h1>
+                </div>
+               
                 <div className={answer==="optionTwo"? "column select" :"column"}>
                   <h4>{question.optionTwo.text}</h4>
                   <p>voted by</p>
@@ -68,17 +62,19 @@ class Poll extends Component {
           ):(
             <div className="poll-container">
               <h5>Would you rather?....</h5>
-              <div className="row">
-                <div className="column one" onClick={this.handleVoteOption('optionOne')} >
-                  <h3>{question.optionOne.text}</h3>
-                </div>
-                <div className='poll-avatar'>
+              <div className='poll-avatar'>
                   <img 
                   src={avatarURLAuthor} 
                   alt="Avatar" 
                   className='image-poll'
                   />
                 </div>
+
+              <div className="row">
+                <div className="column one" onClick={this.handleVoteOption('optionOne')} >
+                  <h3>{question.optionOne.text}</h3>
+                </div>
+              
                 <div className="column two" onClick={this.handleVoteOption('optionTwo')}>
                   <h3>{question.optionTwo.text}</h3>
                 </div>

@@ -5,7 +5,6 @@ import {LoadingBar} from 'react-redux-loading'
 import Nav from './nav'
 import { handleInitialData } from '../actions/shared'
 import SignIn from './sign-in'
-import Home from './home'
 import UserHome from './userhome';
 
 class App extends Component {
@@ -22,11 +21,9 @@ class App extends Component {
 	    		<Router>
 	    		<div>
 	    			<Route path="/" render={(props) => <Nav {...props} authedUser={authedUser} />} />   			    			    		
-				    <Switch>					    
-				         <Route path={`/${authedUser}`} component={UserHome}/>					  
-						<Route path="/login" component={SignIn} />
-						 <Route exact path="/" component={Home} />
-						{/* <Route component={NoMatch} />					  */}
+				    <Switch>		
+            <Route exact path="/" component={SignIn} />			    
+				    <Route path={`/${authedUser}`} component={UserHome}/>					  
 					</Switch>
 				</div>				    
 			    </Router>
