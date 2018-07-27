@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { handleSaveQuestion } from  '../actions/shared'
-
 import '../css/newpoll.css';
 
 class NewPoll extends Component {	
