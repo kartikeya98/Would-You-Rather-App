@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import App from './components/App';
 import {Provider} from 'react-redux'
-import { createStore } from '../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/redux';
+import { createStore } from 'redux';
 import reducers from './reducers';
 import middleware from './middleware';
 
