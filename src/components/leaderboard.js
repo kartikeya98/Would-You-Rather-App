@@ -32,15 +32,15 @@ class LeaderBoard extends Component {
               <th>Score</th>
             </tr>
            
-            {usersSorted.map(usr =>(
+            {usersSorted.map(user =>(
                 <tr>
-                  <td>{usr.name}</td>
+                  <td>{user.name}</td>
                   <td>
-                    <img src={`${usr.avatarURL}`}  alt="avatar" height="25" width="25" /> 
+                    <img src={`${user.avatarURL}`}  alt="avatar" height="55" width="55" /> 
                   </td>
-                  <td>{usersAsked[usr.id]}</td>
-                  <td>{usersAnswered[usr.id]}</td>
-                  <td> {usersAsked[usr.id] + usersAnswered[usr.id]} </td>
+                  <td>{usersAsked[user.id]}</td>
+                  <td>{usersAnswered[user.id]}</td>
+                  <td> {usersAsked[user.id] + usersAnswered[user.id]} </td>
                 </tr>
               ))
             }            

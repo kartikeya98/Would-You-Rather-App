@@ -14,4 +14,7 @@
 
   .data {
       margin-left: 40%;
+      height: 110px;
+      width: 50px;
+      color: blue;
   }
