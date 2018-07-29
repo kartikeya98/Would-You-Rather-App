@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { handleSaveQuestion } from  '../actions/shared'
+
 import '../css/newpoll.css';
 
 class NewPoll extends Component {	
@@ -44,23 +45,25 @@ class NewPoll extends Component {
   		<div className="newpoll-title">
   			<h2>Add a New Poll</h2>
   			<form onSubmit={this.handleSubmit}>
-          <label>
+          <div>
             option One
             <input 
               name="optionOneText"
               type="text"
               value={this.state.optionOneText}
               onChange={this.handleInputChange} />
-          </label>
-          <label>
+          </div>
+          <div>
             option Two
             <input 
               name="optionTwoText"
               type="text"
               value={this.state.optionTwoText}
               onChange={this.handleInputChange} />
-          </label>
+          </div>
+          <div>
           <input type="submit" value="Submit" />
+          </div>
         </form>
 	      
 	    

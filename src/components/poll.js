@@ -35,7 +35,7 @@ class Poll extends Component {
 
             <div className="poll-container">
               <h5>These are the data for this poll</h5>
-              <div className="row">
+              
               <div className='poll-avatar'>
                   <img 
                   src={avatarURLAuthor} 
@@ -57,7 +57,8 @@ class Poll extends Component {
                   <h3>{votesOptionTwo} persons</h3>
                   <h1>{percentatgeOptionTwo}%</h1>
                 </div>
-              </div>
+              
+
             </div>
           ):(
             <div className="poll-container">
@@ -70,7 +71,6 @@ class Poll extends Component {
                   />
                 </div>
 
-              <div className="row">
                 <div className="column one" onClick={this.handleVoteOption('optionOne')} >
                   <h3>{question.optionOne.text}</h3>
                 </div>
@@ -78,7 +78,7 @@ class Poll extends Component {
                 <div className="column two" onClick={this.handleVoteOption('optionTwo')}>
                   <h3>{question.optionTwo.text}</h3>
                 </div>
-              </div>
+            
               <p>please, select one and only one answer</p>          
             </div>
           )

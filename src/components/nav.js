@@ -12,6 +12,7 @@ export default function Nav({match, authedUser}) {
 						<NavLink  to={`/${authedUser}/questions`}>Questions List</NavLink>
 						<NavLink  to={`/${authedUser}/add`}>Add New poll</NavLink>
 						<NavLink  to={`/${authedUser}/leaderboard`}>Leaderboard</NavLink>
+						<p>{authedUser}</p>
 						<NavLink  to={`/${authedUser}/logout`}>Log out</NavLink>
 					</ul>
 				</nav>	        
