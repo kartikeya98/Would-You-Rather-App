@@ -6,6 +6,7 @@ import Nav from './nav'
 import { handleInitialData } from '../actions/shared'
 import SignIn from './sign-in'
 import UserHome from './userhome';
+import Error from './error'
 
 class App extends Component {
   componentDidMount() {
@@ -23,7 +24,8 @@ class App extends Component {
 	    			<Route path="/" render={(props) => <Nav {...props} authedUser={authedUser} />} />   			    			    		
 				    <Switch>		
             <Route exact path="/" component={SignIn} />			    
-				    <Route path={`/${authedUser}`} component={UserHome}/>					  
+				    <Route path={`/${authedUser}`} component={UserHome}/>					
+            <Route component={Error} />  
 					</Switch>
 				</div>				    
 			    </Router>
